@@ -102,6 +102,9 @@ if (!window['css.js']) (_=>{
             --filter-b: 1.1;
             --filter-c: .775;
             --filter-s: .975;
+            --filter-b: 1.2;
+            --filter-c: .6;
+            --filter-s: .95;
             --filter: brightness(var(--filter-b)) contrast(var(--filter-c)) saturate(var(--filter-s));
             --filter-invert: brightness(calc(1/var(--filter-b))) contrast(calc(1/var(--filter-c))) saturate(calc(1/var(--filter-s)));
             filter: var(--filter);`}
@@ -120,6 +123,7 @@ if (!window['css.js']) (_=>{
                 --filter-s: 1;
                 --filter: brightness(var(--filter-b)) contrast(var(--filter-c)) saturate(var(--filter-s));
                 --filter-invert: brightness(calc(1/var(--filter-b))) contrast(calc(1/var(--filter-c))) saturate(calc(1/var(--filter-s)));
+                filter: var(--filter);
             }
             ${[
                 ['seven-segment-display', '', ['.ttf']],
@@ -151,6 +155,7 @@ if (!window['css.js']) (_=>{
                     ['Bold.ttf', { weight:'bold' }],
                     ['BoldItalic.ttf', { style:'italic', weight:'bold' }],
                 ],
+                ['noto-emoji', '', ['.ttf']],
                 // [
                 //     'Roboto Slab', 'roboto-slab/static/RobotoSlab-', 
                 //     ['Regular.ttf'],
@@ -180,7 +185,6 @@ if (!window['css.js']) (_=>{
             }
             body {
                 ${css.mixin.monospace}
-                filter: var(--filter);
             }
             iframe {
                 filter: var(--filter-invert);
